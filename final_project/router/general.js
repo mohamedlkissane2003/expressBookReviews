@@ -85,9 +85,8 @@ public_users.get('/title/:title', async function (req, res) {
 });
 
 //  Get book review
-public_users.get('/review/:isbn',function (req, res) {
+public_users.get('/books/review/:isbn', function (req, res) {
   const isbn = req.params.isbn;
-
   return res.status(200).json(books[isbn].reviews);
 });
 
